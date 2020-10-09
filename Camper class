@@ -1,0 +1,82 @@
+/**
+ This class constructs a Camper, or person sleeping away
+ @author Patrick Wilson 3708040
+*/
+
+public class Camper {
+	private static String camperName;
+	private static double campFees;
+	private static double excursionFees;
+	private static double fundingSupport;
+	private Bunk bunk;
+	private static int bunkNum;
+	
+	/**
+	constructs camper variables
+	@param camperNameIn constructs camper's name
+	@param campFeesIn constructs fee value
+	@param excursionFeesIn constructs activity fee value
+	@param fundingSupportIn constructs parents funding value
+	*/
+	
+	public Camper(String camperNameIn, double campFeesIn, double excursionFeesIn, double fundingSupportIn){
+		camperName = camperNameIn;
+		campFees = campFeesIn;
+		excursionFees = excursionFeesIn;
+		fundingSupport = fundingSupportIn;
+		bunkNum = Bunk.getBedNum();
+	}
+	
+	/**
+	Sets campers name
+	@param newCamper sets camperName to a new string
+	*/
+	public static void setCamperName(String newCamper){
+		camperName = newCamper;
+	}
+	
+	/**
+	sets camp fee value
+	@param newCampFees sets new fee value
+	*/
+	public static void setCampFees(double newCampFees){
+		campFees = newCampFees;
+	}
+	/**
+	sets activity fees
+	@param newExcursionFees sets new activity fee value
+	*/
+	public static void setExcursionFees(double newExcursionFees){
+		excursionFees = newExcursionFees;
+	}
+	/**
+	sets fundingSupport
+	@param newFundingSupport
+	*/
+	public static void setFundingSupport(double newFundingSupport){
+		fundingSupport = newFundingSupport;
+	}
+	/**
+	sets bunk number
+	@param newBunk sets bunk num
+	*/
+	public static void setBunk(int newBunk){
+		bunkNum = newBunk;
+	}
+	/**
+	accesses total price
+	@return returns all fees
+	*/
+	public static double getTotalWeeklyFeesOwing(){
+		return excursionFees + campFees + Bunk.getBedCost();
+	}
+	/**
+	accesses mail label
+	@return returns a string of mail info
+	*/
+	public static String getOnsiteMailLabel(){
+		return camperName + "\n" + Bunk.getCabinName() + ", " + bunkNum; 
+	}
+	
+	
+}
