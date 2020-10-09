@@ -1,0 +1,47 @@
+/**
+ This class constructs a Bunk for Camp
+ @author Patrick Wilson 3708040
+*/
+
+public class Bunk {
+	private static String cabinName;
+	private static int bedNum;
+	private static double bunkCost;
+	
+	/**
+	constructs a Bunk for a sleep-away camp
+	@param cabinNameIn creates the building name
+	@param bedNumIn creates the bed's number
+	@param bunkCostIn creates a cost for the bunk
+	*/
+	public Bunk(String cabinNameIn, int bedNumIn, double bunkCostIn){
+		cabinNameIn = cabinName;
+		bedNumIn = bedNum;
+		bunkCostIn = bunkCost;
+	}
+	
+	/**
+	gets the cabin name
+	@return cabinName returns Cabin Name
+	*/
+	public static String getCabinName(){
+		return cabinName;
+	}
+	
+	/**
+	gets the bed number
+	@return bedNum returns B\ed number
+	*/
+	public static int getBedNum(){
+		return bedNum;
+	}
+	
+	/**
+	gets the cost of the bunk
+	@return bunkCost returns Bunk cost
+	*/
+	public static double getBedCost(){
+		return bunkCost;
+	}
+	
+}
