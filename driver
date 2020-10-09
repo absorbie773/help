@@ -1,0 +1,35 @@
+/**
+ This class drives the camper and bunk classes
+ @author Patrick Wilson 3708040
+*/
+
+public class As4TestDriver{
+	
+	public String camperAnne;
+	public String camperPorter;
+	public String camperDoucet;
+	public String bunkAnne;
+	public String bunkPorter;
+	public String bunkDoucet;
+	
+	public static void main(String [] args){
+		
+		Camper camperAnne = new Camper("Anna Marie Sullivan", 250, 148.3, 150);
+		Bunk bunkAnne = new Bunk("Chickadee Lodge", 7, 155.75);
+		Camper.setExcursionFees(178.80);
+		System.out.println("\n" + "total fees: " + Camper.getTotalWeeklyFeesOwing() + ". Mail Label: " + Camper.getOnsiteMailLabel());
+		
+		Bunk bunkPorter = new Bunk("Moose Hall", 16, 131.25);
+		Camper camperPorter = new Camper("Porter Smith", 340, 277.88,0);
+		Camper.setBunk(9);
+		Camper.setCampFees(147);
+		System.out.println("\n" + "total fees: " + Camper.getTotalWeeklyFeesOwing() + ". Mail Label: " + Camper.getOnsiteMailLabel());
+		 
+		Bunk bunkDoucet = new Bunk("Brookside Cabin", 11, 385);
+		Camper camperDoucet = new Camper("Katharine Doucet", 565.30, 0, 175);
+		Camper.setCampFees(525);
+		System.out.println("\n" + "total fees: " + Camper.getTotalWeeklyFeesOwing() + ". Mail Label: " + Camper.getOnsiteMailLabel());
+		
+	}
+	
+}
